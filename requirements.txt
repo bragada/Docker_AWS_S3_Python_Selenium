@@ -1,0 +1,3 @@
+selenium==4.20.0
+webdriver_manager==4.0.1
+boto3==1.34.99
