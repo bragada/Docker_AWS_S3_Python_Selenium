@@ -3,8 +3,8 @@ Docker que contém um script Python e utiliza Selenium para baixar arquivos e su
 
 Para criar a imagem, rode no terminal:
 
-  docker build -t python-selenium:1.0 .
+* docker build -t python-selenium:1.0 .
 
 Para criar e rodar o conteiner, rode no terminal:
 
-  docker run --name python-selenium-conteiner1.0 -d python-selenium:1.0 
+* docker run --name python-selenium-conteiner1.0 -d python-selenium:1.0 
