@@ -117,12 +117,18 @@ sleep(1)
 download_at =  driver.find_element(By.XPATH,'//button[@class = "v-btn v-btn--bottom v-btn--has-bg theme--light v-size--default primary white--text"]')
 download_at.click()
 
+# Verifica Se Baixou
 def baixou():
-    arquivo = f'{datetime.now().strftime("%d-%m-%Y")}.csv'
-    while not os.path.exists(arquivo):
-        sleep(1)  # Aguarda 1 segundo antes de verificar novamente
-    return True
+    try:
+        arquivo =  f'{datetime.now().strftime("%d-%m-%Y")}.csv'
+        while not os.path.exists(arquivo):
+            sleep(1)  # Aguarda 1 segundo antes de verificar novamente
+        return True
+    except Exception as e:
+        print("Ocorreu um erro:", e)
+        return False
 baixou()
+
 print("Download Successfully")
 
 # Rename File
